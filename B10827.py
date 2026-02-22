@@ -1,0 +1,16 @@
+a,b=input().split()
+b=int(b)
+l=len(a.split('.')[1])
+if(a[0]==0):
+  a=a[2:]
+else:
+  a=a.split('.')[0]+a.split('.')[1]
+a=int(a)
+c=a**b
+d=str(c)
+if(l*b<len(d)):
+    print(d[:-l*b]+'.'+d[-l*b:])
+elif(l*b==len(d)):
+    print('0.'+d)
+else:
+    print('0.'+'0'*(l*b-len(d))+d)
